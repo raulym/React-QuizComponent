@@ -15,7 +15,7 @@ class Quiz extends React.Component {
 
         return (
             <div>
-                <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} />
+                {!isQuizEnd && <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} />}
                 {isQuizEnd && <QuizEnd />}
             </div>)        
     };
